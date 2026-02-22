@@ -1,0 +1,64 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background: #08080f; color: #d8d8e4; min-height: 100vh; }
+.app { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+header { text-align: center; margin-bottom: 24px; }
+.logo { font-size: 1.8rem; font-weight: 700; }
+.tagline { color: #666; font-size: 0.9rem; margin-top: 4px; }
+
+.tabs { display: flex; gap: 4px; margin-bottom: 20px; background: #111118; border-radius: 10px; padding: 4px; }
+.tab { flex: 1; padding: 10px; background: transparent; border: none; color: #888; font-family: 'Inter', sans-serif; font-size: 0.85rem; cursor: pointer; border-radius: 8px; transition: all 0.2s; }
+.tab:hover { color: #ccc; }
+.tab.active { background: #a855f7; color: white; font-weight: 600; }
+
+.card { background: #111118; border: 1px solid #1e1f2e; border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+.card h3 { font-size: 0.9rem; margin-bottom: 14px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 16px; }
+
+.field { margin-bottom: 10px; }
+.field label { display: block; font-size: 0.72rem; color: #888; text-transform: uppercase; margin-bottom: 4px; }
+select { width: 100%; padding: 8px 10px; background: #08080f; border: 1px solid #2a2b38; border-radius: 6px; color: #ccc; font-family: 'Inter', sans-serif; font-size: 0.85rem; outline: none; }
+select:focus { border-color: #a855f7; }
+
+.drop-zone { border: 2px dashed #2a2b38; border-radius: 8px; padding: 30px; text-align: center; cursor: pointer; color: #666; font-size: 0.85rem; transition: all 0.2s; }
+.drop-zone:hover { border-color: #a855f7; color: #a855f7; }
+
+.checks { display: flex; flex-wrap: wrap; gap: 6px; }
+.check-item { display: flex; align-items: center; gap: 4px; padding: 4px 8px; background: #08080f; border: 1px solid #2a2b38; border-radius: 5px; font-size: 0.78rem; cursor: pointer; }
+.check-item.selected { border-color: #a855f7; background: rgba(168,85,247,0.1); color: #a855f7; }
+
+.btn { width: 100%; padding: 12px; background: #a855f7; color: white; border: none; border-radius: 8px; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.2s; }
+.btn:hover { background: #9333ea; }
+.btn:disabled { opacity: 0.5; }
+.btn-sm { padding: 4px 10px; background: #1e1e2e; border: 1px solid #2a2b38; border-radius: 5px; color: #ccc; font-size: 0.72rem; cursor: pointer; font-family: 'Inter', sans-serif; }
+.btn-sm:hover { border-color: #a855f7; }
+
+.metric-card { background: #0e0e16; border: 1px solid #1e1f2e; border-radius: 8px; padding: 12px; text-align: center; }
+.m-val { font-size: 1.4rem; font-weight: 700; color: #a855f7; }
+.m-label { font-size: 0.7rem; color: #888; }
+
+.imp-bar { display: flex; align-items: center; gap: 8px; padding: 4px 0; font-size: 0.8rem; }
+.imp-name { width: 120px; color: #999; text-align: right; font-size: 0.75rem; }
+.imp-fill { height: 14px; background: linear-gradient(90deg, #a855f7, #6366f1); border-radius: 3px; min-width: 2px; transition: width 0.4s; }
+.imp-val { font-size: 0.72rem; color: #666; }
+
+.exp-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #1a1a28; font-size: 0.82rem; }
+.exp-row:last-child { border: none; }
+.exp-info { color: #ccc; }
+.exp-meta { color: #666; font-size: 0.72rem; }
+.exp-acc { font-weight: 600; color: #a855f7; }
+
+.reg-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #1a1a28; }
+.reg-row:last-child { border: none; }
+.reg-name { font-weight: 600; font-size: 0.85rem; }
+.reg-ver { color: #888; font-size: 0.75rem; }
+.stage-badge { padding: 2px 8px; border-radius: 8px; font-size: 0.68rem; font-weight: 600; }
+.st-development { background: rgba(168,85,247,0.15); color: #a855f7; }
+.st-staging { background: rgba(251,191,36,0.15); color: #fbbf24; }
+.st-production { background: rgba(52,211,153,0.15); color: #34d399; }
+.st-archived { background: rgba(100,100,120,0.15); color: #888; }
+
+.ds-stat { font-size: 0.8rem; color: #999; padding: 4px 0; }
+
+.hidden { display: none !important; }
+@media (max-width: 600px) { .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; } }

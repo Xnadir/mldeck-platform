@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLDeck — ML Experiment Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="logo">🎛️ MLDeck</div>
+            <p class="tagline">End-to-end ML experiment platform</p>
+        </header>
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('run',this)">🧪 Run</button>
+            <button class="tab" onclick="switchTab('experiments',this)">📊 Experiments</button>
+            <button class="tab" onclick="switchTab('registry',this)">📦 Registry</button>
+        </div>
+        <div class="tab-content" id="tab-run">
+            <div class="card">
+                <h3>1. Upload Dataset</h3>
+                <div class="drop-zone" id="dropZone"><p>📁 Drop CSV here or click</p><input type="file" id="fileInput" accept=".csv" hidden></div>
+                <div id="datasetInfo" class="hidden"></div>
+            </div>
+            <div class="card hidden" id="configCard">
+                <h3>2. Configure Experiment</h3>
+                <div class="grid-3">
+                    <div class="field"><label>Target Column</label><select id="targetCol"></select></div>
+                    <div class="field"><label>Model</label><select id="modelType"><option value="random_forest">Random Forest</option><option value="gradient_boosting">Gradient Boosting</option><option value="logistic_regression">Logistic Regression</option></select></div>
+                    <div class="field"><label>Features</label><div id="featureChecks" class="checks"></div></div>
+                </div>
+                <button class="btn" id="runBtn" onclick="runExp()">▶ Run Experiment</button>
+            </div>
+            <div class="card hidden" id="resultCard">
+                <h3>Results</h3>
+                <div class="grid-4" id="metricCards"></div>
+                <div id="importances"></div>
+            </div>
+        </div>
+        <div class="tab-content hidden" id="tab-experiments">
+            <div class="card"><h3>Experiment History</h3><div id="expList"></div></div>
+        </div>
+        <div class="tab-content hidden" id="tab-registry">
+            <div class="card"><h3>Model Registry</h3><div id="regList"></div></div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
