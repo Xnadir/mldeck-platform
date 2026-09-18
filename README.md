@@ -1,5 +1,7 @@
 # MLDeck — End-to-End ML Platform 🎛️
 
+![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![sklearn](https://img.shields.io/badge/sklearn-1.3%2B-orange) ![License](https://img.shields.io/badge/license-MIT-green) — End-to-End ML Platform 🎛️
+
 A self-contained ML experiment platform. Upload datasets, run experiments, compare results, and manage models — all from a web dashboard. Shows that I can think about the full ML lifecycle, not just notebooks.
 
 ## Features
