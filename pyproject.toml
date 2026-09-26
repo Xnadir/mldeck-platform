@@ -1,0 +1,16 @@
+[project]
+name = "mldeck-platform"
+version = "0.1.0"
+description = "End-to-end ML experiment platform"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
