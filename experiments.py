@@ -9,6 +9,10 @@ import random
 import numpy as np
 import pandas as pd
 from datetime import datetime
+import logging
+
+logger = logging.getLogger(__name__)
+
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.linear_model import LogisticRegression
