@@ -53,3 +53,25 @@ mldeck-platform/
 ## License
 
 MIT
+
+
+## Project Structure
+
+```
+mldeck-platform/
+├── app.py           # FastAPI server and routes
+├── experiments.py   # Experiment tracking engine
+├── models.py        # Model registry and versioning
+├── static/          # Frontend (HTML/CSS/JS)
+├── tests/           # Test suite
+├── Dockerfile
+├── Makefile
+└── requirements.txt
+```
+
+## Docker
+
+```bash
+docker build -t mldeck .
+docker run -p 8000:8000 mldeck
+```
